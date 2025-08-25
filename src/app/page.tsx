@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
         </div>
         <div className="m-auto w-2/3">
           <h1 className="ml-12 text-[var(--primary)] text-6xl">Mariana Lopez</h1>
-          <h3 className="ml-12 text-[var(--secondary)] text-4xl">Desarrolladora Frontend</h3>
+          <h3 className="ml-12 text-[var(--secondary)] text-4xl">Frontend Developer Junior</h3>
           <p 
             className="m-3 ml-12 mr-12 text-[var(--paragraph)]"
           >
@@ -31,9 +33,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className=" flex flex-col justify-center items-center m-12 w-4/5">
+      <section className=" flex flex-col justify-center items-center w-4/5">
         <h2 className="m-6 text-[var(--secondary)] text-4xl text-center">Mis proyectos</h2>
-        <div className="flex mt-5 p-6 w-2/3 bg-[var(--primary)] rounded-lg relative">
+        <div className="flex mt-5 pr-2 p-6 w-4/5 border-2 border-[var(--primary)] rounded-lg relative">
           <div className="w-3/5 relative">
             <span className="absolute flex justify-center items-center -top-12 -left-1 p-1 pl-3 pr-3 bg-[var(--secondary)] rounded-full text-[var(--background)] text-3xl">Solvex Company</span>
             <p className="mt-2">
@@ -43,25 +45,35 @@ export default function Home() {
               los tiempos de resolución.
             </p>
             <div>
-              <span>Tecnologias:</span>
-              <div className="flex flex-wrap mt-1" >
-                <div className="m-1 pl-2 pr-2 bg-blue-300 w-fit rounded-full">React.js</div>
-                <div className="m-1 pl-2 pr-2 bg-blue-500 w-fit rounded-full">TypeScript</div>
-                <div className="m-1 pl-2 pr-2 bg-gray-600 w-fit rounded-full">Next.js</div>
-                <div className="m-1 pl-2 pr-2 bg-blue-500 w-fit rounded-full">Formik y YUP</div>
-                <div className="m-1 pl-2 pr-2 bg-green-500 w-fit rounded-full">Figma</div>
-                <div className="m-1 pl-2 pr-2 bg-blue-400 w-fit rounded-full">Axios</div>
-                <div className="m-1 pl-2 pr-2 bg-blue-400 w-fit rounded-full">Tailwind CSS</div>
+              <span><br/>Tecnologías:</span>
+              <div className="flex flex-wrap mt-1 mb-6" >
+                <span className="icon-[lineicons--typescript] p-1 bg-blue-600 text-4xl"></span>
+                <span className="icon-[lineicons--react] p-1 bg-sky-300 text-4xl"></span>
+                <span className="icon-[lineicons--nextjs] p-1 bg-gray-200 text-4xl"></span>
+                <span className="icon-[lineicons--tailwindcss] p-1 bg-teal-400 text-4xl"></span>
+                <span className="icon-[lineicons--nodejs] p-1 bg-lime-400 text-4xl"></span>
+              </div>
+              <div className="flex justify-evenly">
+                <Link 
+                  href={'https://github.com/solvex-company/solvex-front'}
+                  className="m-1 p-1 pl-5 pr-5 border-1 border-[var(--primary)] rounded-full text-lg hover:bg-[var(--primary)]"
+                >GitHub</Link>
+                <Link 
+                  href={'https://solvex-front.vercel.app/'}
+                  className="m-1 p-1 pl-5 pr-5 border-1 border-[var(--primary)] rounded-full text-lg hover:bg-[var(--primary)]"
+                >Demo</Link>
               </div>
             </div>
           </div>
-          <div className="m-2 absolute flex justify-center items-center top-3 -right-12 rounded-md overflow-hidden">
-            <Image 
-              src={'https://ik.imagekit.io/meryanne/SolvexHome.png?updatedAt=1755897893593'}
-              width={420}
-              height={70}
-              alt="Inicio Solvex Company"
-              className="object-cover"/>
+          <div className="w-2/5 flex justify-end items-center">
+            <div className=" flex justify-center items-center rounded-md overflow-hidden">
+              <Image 
+                src={'https://ik.imagekit.io/meryanne/SolvexHome.png?updatedAt=1755897893593'}
+                width={420}
+                height={70}
+                alt="Inicio Solvex Company"
+                className="object-cover"/>
+            </div>
           </div>
         </div>
       </section>
